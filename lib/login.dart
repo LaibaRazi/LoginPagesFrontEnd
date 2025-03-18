@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 class MyLogin extends StatefulWidget {
   const MyLogin({super.key});
@@ -26,7 +27,7 @@ class _MyLoginState extends State<MyLogin> {
             ),
             SingleChildScrollView(
               child: Container(
-                padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.5,left: MediaQuery.of(context).size.width*0.07
+                padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.4,left: MediaQuery.of(context).size.width*0.07
                     ,right: MediaQuery.of(context).size.width*0.07),
                 child: Column(
                   children: [
@@ -74,7 +75,10 @@ class _MyLoginState extends State<MyLogin> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        TextButton(onPressed: (){}, child: Text('Sign Up',style: TextStyle(
+                        TextButton(onPressed: (){
+                          Navigator.pushNamed(context, 'register');
+                        },
+                           child: Text('Sign Up',style: TextStyle(
                             decoration:TextDecoration.underline ,
                             fontSize: 18,
                             color: Colors.white70
@@ -86,7 +90,9 @@ class _MyLoginState extends State<MyLogin> {
                                 decoration:TextDecoration.underline ,
                                 fontSize: 18,
                                 color: Colors.white70
-                            ),))
+                            ),
+                            )
+                        )
                       ],
                     )
                   ],
