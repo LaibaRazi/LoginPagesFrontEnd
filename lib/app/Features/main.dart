@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutterprojectudemy/login.dart';
-import 'package:flutterprojectudemy/register.dart';
+import 'package:flutterprojectudemy/app/Features/login.dart';
+import 'package:flutterprojectudemy/app/Features/register.dart';
 
 void main() {
   runApp(
